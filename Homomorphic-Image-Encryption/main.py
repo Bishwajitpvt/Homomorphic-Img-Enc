@@ -23,9 +23,9 @@ im = Image.open(r"S:\Homomorphic-Image-Encryption-master\Homomorphic-Image-Encry
 encrypt_image = IC.ImgEncrypt(publicKey,im)
 inc_bright = IC.homomorphicBrightness(publicKey,encrypt_image,30)
 data = inc_bright.astype(dtype=np.float64)
-saveImage(data,"encrypted-images/moongi-enc.bmp")
+saveImage(data,"encrypted-images/img-enc.bmp")
 
 im = IC.ImgDecrypt(publicKey,privateKey,inc_bright)
-im.save("encrypted-images/moongi-dec.bmp")
+im.save("encrypted-images/img-dec.bmp")
 
 im.show()
