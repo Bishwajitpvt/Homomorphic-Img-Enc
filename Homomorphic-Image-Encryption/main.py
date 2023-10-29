@@ -17,7 +17,7 @@ def saveImage(data,filename):
 publicKey, privateKey = Pa.generate_keys()
 print(publicKey.__repr__())
 
-im = Image.open(r"S:\Homomorphic-Image-Encryption-master\Homomorphic-Image-Encryption\test-images\lena512gray.bmp")
+im = Image.open(r"S:\Homomorphic-Image-Encryption-master\Homomorphic-Image-Encryption\test-images\lungcancer.jpg")
 # im.show()
 
 encrypt_image = IC.ImgEncrypt(publicKey,im)
